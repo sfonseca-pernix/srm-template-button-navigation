@@ -1,25 +1,16 @@
-function ClickableItemModel(index, data) {
-  this.index = index;
-  this.text = data.text;
-  this.isMoved = ko.observable(false);
+function loadImages(customImageurl){
+  var customImageurl = `images/${customImageurl}.png`;
+  document.getElementById("loadImage").src = customImageurl;
 }
 
-function MatchingItemModel(index, data) {
-  this.index = index;
-  this.text = data.text;
-  this.clickableItem = ko.observable();
-
-  this.isShowingUnmatch = ko.observable(false);
-
-  this.isFilled = ko.computed(function () {
-    return this.clickableItem();
-  }, this);
-
-  this.isCorrect = ko.observable();
+function actionClickButton(elementIdClicked){
+  clickedElement = document.getElementsByClassName('clicked-box')[0]
+  clickedElement.classList.remove('clicked-box')
+  selectedElement = document.getElementById(elementIdClicked);
+  selectedElement.classList.add("clicked-box");
 }
 
 function ButtonNavigationTemplate() {
-  // this.container = null;	
 
   this.title = ko.observable();
   this.instruction = ko.observable();
@@ -40,7 +31,6 @@ function ButtonNavigationTemplate() {
   }
 
   this.xmlLoaded = function (xml) {
-    console.log("xml loaded");
     var data = this.xml2json(xml).dataset;
     this.title(data.title);
     this.instruction(data.instruction);
@@ -56,5 +46,11 @@ ButtonNavigationTemplate.prototype.constructor = ButtonNavigationTemplate;
 $(document).ready(function () {
   var obj = new ButtonNavigationTemplate();
   ko.applyBindings(obj, $("#button_navigation_template")[0])
+  loadImages("integumentary");
 
+  $('.tabButton').click(function(){
+    let elementSelected = this.id
+    loadImages(elementSelected)
+    actionClickButton(elementSelected)
+  });
 });

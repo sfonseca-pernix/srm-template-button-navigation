@@ -2,126 +2,161 @@
 <html l lang='en'>
 
 <head>
-    <title>Matching Responsive</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/settings.css">
-    <link rel="stylesheet" href="css/style.css">
+  <title>Matching Responsive</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/settings.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <script src="lib/SCORM_API_wrapper.js"></script>
-    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/bootstrap/js/popper.min.js"></script>
-    <script src="lib/knockout/knockout-3.5.1.js"></script>
+  <script src="lib/SCORM_API_wrapper.js"></script>
+  <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/bootstrap/js/popper.min.js"></script>
+  <script src="lib/knockout/knockout-3.5.1.js"></script>
 
-    <script src="js/util.js"></script>
-    <script src="js/main.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
-    <div id="button_navigation_template" class="container-fluid activity-container">
-        <header class="activity-header clearfix">
-            <button type="button" class="setting-button"
-                data-bind="click:showSettingsPanelHandler,visible:!showSettingsPanel()" id="settingsBtn"
-                aria-label="Color Scheme">
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38"
-                    data-bind="if:curTheme" aria-hidden="true" alt="color scheme">
-                    <g id="noun_Settings_735233" transform="translate(-14.5 -15.5)">
-                        <path id="Path_4" data-name="Path 4"
-                            d="M51.644,31.572,49.2,30.5a3.345,3.345,0,0,1-1.755-1.788h0a3.345,3.345,0,0,1,0-2.5l.974-2.473a1.07,1.07,0,0,0-.118-1.375l-2.676-2.676a1.07,1.07,0,0,0-1.375-.118l-2.467,1.017a3.345,3.345,0,0,1-2.5,0h0a3.345,3.345,0,0,1-1.788-1.755l-1.07-2.441a1.07,1.07,0,0,0-1.07-.888H31.605a1.07,1.07,0,0,0-1.07.888l-1.07,2.441a3.345,3.345,0,0,1-4.282,1.777L22.742,19.6a1.07,1.07,0,0,0-1.375.118l-2.676,2.676a1.07,1.07,0,0,0-.118,1.375l1.012,2.446a3.345,3.345,0,0,1,0,2.515h0a3.345,3.345,0,0,1-1.755,1.777l-2.441,1.07a1.07,1.07,0,0,0-.888,1.07v3.746a1.07,1.07,0,0,0,.888,1.07l2.441,1.07a3.345,3.345,0,0,1,1.755,1.788h0a3.345,3.345,0,0,1,0,2.5l-.985,2.43a1.07,1.07,0,0,0,.118,1.375l2.676,2.676a1.07,1.07,0,0,0,1.375.118l2.446-1.012a3.345,3.345,0,0,1,2.5,0h0a3.345,3.345,0,0,1,1.788,1.755l1.07,2.441a1.07,1.07,0,0,0,1.07.888h3.746a1.07,1.07,0,0,0,1.07-.888l1.07-2.441a3.345,3.345,0,0,1,1.793-1.761h0a3.345,3.345,0,0,1,2.5,0l2.473.974a1.07,1.07,0,0,0,1.375-.118l2.676-2.676a1.07,1.07,0,0,0,.118-1.375l-1.054-2.43a3.345,3.345,0,0,1,0-2.515h0a3.345,3.345,0,0,1,1.755-1.777l2.441-1.07a1.07,1.07,0,0,0,.888-1.07V32.605A1.07,1.07,0,0,0,51.644,31.572ZM33.5,43.5a9,9,0,1,1,9-9,9,9,0,0,1-9,9Z"
-                            transform="translate(0 0)" />
-                    </g>
-                </svg>
-                <span class="sr-only">Close</span>
-            </button>
-            <div class="settings-container" data-bind="visible:showSettingsPanel" role="dialog"
-                aria-labelledby="settingsBtn" aria-describedby="Color Scheme Dialog">
-                <div class="settings-container-themes">
-                    <div class="settings-container-themes-title">
-                        <strong>Color Scheme</strong>
-                    </div>
-                    <!-- ko foreach: themes-->
-                    <button class="theme-btn"
-                        data-bind="click:$parent.selectThemeHandler,attr:{'aria-pressed':$parent.curTheme() == $data}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                            aria-hidden="true">
-                            <ellipse id="Ellipse_203" data-name="Ellipse 203" cx="17.5" cy="17.5" rx="17.5" ry="17.5"
-                                data-bind="attr:{'fill': color1}" />
-                            <rect id="Rectangle_769" data-name="Rectangle 769" width="35" height="5" rx="1"
-                                transform="translate(0 15.5)" data-bind="attr:{'fill': color3,alt:title}" />
-                        </svg>
+  <div id="button_navigation_template" class="container-fluid activity-container">
+    <header class="activity-header clearfix">
+      <button type="button" class="setting-button"
+        data-bind="click:showSettingsPanelHandler,visible:!showSettingsPanel()" id="settingsBtn"
+        aria-label="Color Scheme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" data-bind="if:curTheme"
+          aria-hidden="true" alt="color scheme">
+          <g id="noun_Settings_735233" transform="translate(-14.5 -15.5)">
+            <path id="Path_4" data-name="Path 4"
+              d="M51.644,31.572,49.2,30.5a3.345,3.345,0,0,1-1.755-1.788h0a3.345,3.345,0,0,1,0-2.5l.974-2.473a1.07,1.07,0,0,0-.118-1.375l-2.676-2.676a1.07,1.07,0,0,0-1.375-.118l-2.467,1.017a3.345,3.345,0,0,1-2.5,0h0a3.345,3.345,0,0,1-1.788-1.755l-1.07-2.441a1.07,1.07,0,0,0-1.07-.888H31.605a1.07,1.07,0,0,0-1.07.888l-1.07,2.441a3.345,3.345,0,0,1-4.282,1.777L22.742,19.6a1.07,1.07,0,0,0-1.375.118l-2.676,2.676a1.07,1.07,0,0,0-.118,1.375l1.012,2.446a3.345,3.345,0,0,1,0,2.515h0a3.345,3.345,0,0,1-1.755,1.777l-2.441,1.07a1.07,1.07,0,0,0-.888,1.07v3.746a1.07,1.07,0,0,0,.888,1.07l2.441,1.07a3.345,3.345,0,0,1,1.755,1.788h0a3.345,3.345,0,0,1,0,2.5l-.985,2.43a1.07,1.07,0,0,0,.118,1.375l2.676,2.676a1.07,1.07,0,0,0,1.375.118l2.446-1.012a3.345,3.345,0,0,1,2.5,0h0a3.345,3.345,0,0,1,1.788,1.755l1.07,2.441a1.07,1.07,0,0,0,1.07.888h3.746a1.07,1.07,0,0,0,1.07-.888l1.07-2.441a3.345,3.345,0,0,1,1.793-1.761h0a3.345,3.345,0,0,1,2.5,0l2.473.974a1.07,1.07,0,0,0,1.375-.118l2.676-2.676a1.07,1.07,0,0,0,.118-1.375l-1.054-2.43a3.345,3.345,0,0,1,0-2.515h0a3.345,3.345,0,0,1,1.755-1.777l2.441-1.07a1.07,1.07,0,0,0,.888-1.07V32.605A1.07,1.07,0,0,0,51.644,31.572ZM33.5,43.5a9,9,0,1,1,9-9,9,9,0,0,1-9,9Z"
+              transform="translate(0 0)" />
+          </g>
+        </svg>
+        <span class="sr-only">Close</span>
+      </button>
+      <div class="settings-container" data-bind="visible:showSettingsPanel" role="dialog" aria-labelledby="settingsBtn"
+        aria-describedby="Color Scheme Dialog">
+        <div class="settings-container-themes">
+          <div class="settings-container-themes-title">
+            <strong>Color Scheme</strong>
+          </div>
+          <!-- ko foreach: themes-->
+          <button class="theme-btn"
+            data-bind="click:$parent.selectThemeHandler,attr:{'aria-pressed':$parent.curTheme() == $data}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" aria-hidden="true">
+              <ellipse id="Ellipse_203" data-name="Ellipse 203" cx="17.5" cy="17.5" rx="17.5" ry="17.5"
+                data-bind="attr:{'fill': color1}" />
+              <rect id="Rectangle_769" data-name="Rectangle 769" width="35" height="5" rx="1"
+                transform="translate(0 15.5)" data-bind="attr:{'fill': color3,alt:title}" />
+            </svg>
 
-                        <span data-bind="text:title"></span></button>
-                    <!-- /ko -->
-                </div>
-                <button class="close-btn" data-bind="click:closeSettingsPanelHandler" aria-label="Close color scheme">
-                    <img src="images/cross.svg" aria-hidden="true" alt="close" />
-                    <span class="sr-only">Close color scheme</span>
-                </button>
-            </div>
+            <span data-bind="text:title"></span></button>
+          <!-- /ko -->
+        </div>
+        <button class="close-btn" data-bind="click:closeSettingsPanelHandler" aria-label="Close color scheme">
+          <img src="images/cross.svg" aria-hidden="true" alt="close" />
+          <span class="sr-only">Close color scheme</span>
+        </button>
+      </div>
 
-            <h1 class="activity-title" data-bind="html:title"></h1>
-            <div data-bind="with:instruction">
-                <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()">To
-                    complete the activity, select each definition and then click the term that it belongs to. Replay the
-                    interactiion as many times you need. There is no time limit. Your responses will not be graded</p>
+      <h1 class="activity-title" data-bind="html:title"></h1>
+      <div data-bind="with:instruction">
+        <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()">To
+          complete the activity, select each definition and then click the term that it belongs to. Replay the
+          interactiion as many times you need. There is no time limit. Your responses will not be graded</p>
 
-                <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()">To
-                    complete the activity, select each definition and then click the term that it belongs to. Replay the
-                    interactiion as many times you need. There is no time limit. Your responses will not be graded</p>
+        <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()">To
+          complete the activity, select each definition and then click the term that it belongs to. Replay the
+          interactiion as many times you need. There is no time limit. Your responses will not be graded</p>
+      </div>
+    </header>
+    <section>
+      <div class="row d-flex text-center ">
+        <div class="col-4 ">
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton left-cards clicked-box" id="integumentary">
+              <p class="button-text">Integumentary</p>
             </div>
-        </header>
-        <section> 
-            <div class="row d-flex text-center ">
-                <div class="col-4 ">
-                    <div class="row d-flex justify-content-center">
-                        <div class="left-cards "></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="left-cards "></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="left-cards "></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="left-cards "></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="left-cards "></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="left-cards "></div>
-                    </div>
-                </div>
-                <div class="col-4 d-flex justify-content-center align-items-center">
-                    <div class="row">
-                        <img src="images/Screen_Shot_2021-03-26_at_2140.png" class="img-responsive" >
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="row d-flex justify-content-center">
-                        <div class="right-cards"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="right-cards"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="right-cards"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="right-cards"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="right-cards"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="right-cards"></div>
-                    </div>
-                </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton left-cards" id="muscular">
+              <p class="button-text">Muscular</p>
             </div>
-        </section>
-    </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class=" tabButton left-cards" id="skeletal">
+              <p class="button-text">Skeletal</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton left-cards" id="digestive">
+              <p class="button-text">Digestive</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton left-cards" id="lymphatic">
+              <p class="button-text">Lymphatic</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton left-cards" id="endocrine">
+              <p class="button-text">Endocrine</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 d-flex justify-content-center align-items-center ">
+          <div class="row load-image">
+            <img id="loadImage" class="img-responsive">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton right-cards" id="nervous">
+              <p class="button-text">Nervous</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton right-cards" id="circulatory">
+              <p class="button-text">Circulatory</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton right-cards" id="urinary">
+              <p class="button-text">Urinary</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class=" tabButton right-cards" id="respiratory">
+              <p class="button-text">Respiratory</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton right-cards" id="female_reproductive">
+              <p class="button-text">Female Reproductive</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="tabButton right-cards" id="male_reproductive">
+              <p class="button-text">Male Reproductive</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer m-5">
+        <div class="row">
+           <div class="col">
+            <span class="data_button">Carcinogens are substances that have the potential to cause cancer.  These substances exist all around us and develop naturally or are created by humans. Review the information on examples of natural and created carcinogenic agents found in the environment to complete this activity. </span>
+           </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <span class="artwork_references">Artwork References</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 
 </html>

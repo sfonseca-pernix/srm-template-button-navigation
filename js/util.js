@@ -38,21 +38,16 @@ Util.prototype.setCssVariables = function () {
   var str = ":root{";
 
   for (var o in this.xmljson.desktop) {
-    console.log(this.xmljson.desktop[o]);
     var tmp = o;
     for (var i in this.xmljson.desktop[o]) {
-      console.log(this.xmljson.desktop[o][i], i);
 
       str += "--desktop-" + o + "-" + i + ":" + this.xmljson.desktop[o][i] + ";";
     }
   }
 
   for (var o in this.xmljson.mobile) {
-    console.log(this.xmljson.mobile[o]);
     var tmp = o;
     for (var i in this.xmljson.mobile[o]) {
-      console.log(this.xmljson.mobile[o][i], i);
-
       str += "--mobile-" + o + "-" + i + ":" + this.xmljson.mobile[o][i] + ";";
     }
   }
@@ -224,7 +219,6 @@ Util.prototype.xml2json = function (xml) {
     }
     return obj;
   } catch (e) {
-    console.log(e.message);
   }
 }
 Util.prototype.shuffleArray = function (array) {
