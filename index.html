@@ -62,18 +62,19 @@
 
       <h1 class="activity-title" data-bind="html:title"></h1>
       <div data-bind="with:instruction">
-        <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()">To
-          complete the activity, select each definition and then click the term that it belongs to. Replay the
-          interactiion as many times you need. There is no time limit. Your responses will not be graded</p>
-
-        <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()">To
-          complete the activity, select each definition and then click the term that it belongs to. Replay the
-          interactiion as many times you need. There is no time limit. Your responses will not be graded</p>
+        <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()"></p>
+        <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()"></p>
       </div>
     </header>
     <section>
       <div class="row d-flex text-center ">
-        <div class="col-4 ">
+        <d class="row d-flex justify-content-center">
+          <div class="mobile-card">
+            <div class="circle-right-arrow "><i class="arrow right mt-3"></i></div>
+            <p class="button-text" id="mobile-button-text"></p>
+          </div>
+        </d>
+        <div class="col-4">
           <div class="row d-flex justify-content-center">
             <div class="tabButton left-cards clicked-box" id="integumentary">
               <p class="button-text">Integumentary</p>
