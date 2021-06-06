@@ -10,6 +10,11 @@ function actionClickButton(elementIdClicked){
   selectedElement.classList.add("clicked-box");
 }
 
+function loadDataMobile(option){
+  buttonText =  document.getElementById("mobile-button-text");
+  buttonText.innerHTML = option; 
+}
+
 function ButtonNavigationTemplate() {
 
   this.title = ko.observable();
@@ -47,10 +52,18 @@ $(document).ready(function () {
   var obj = new ButtonNavigationTemplate();
   ko.applyBindings(obj, $("#button_navigation_template")[0])
   loadImages("integumentary");
+  loadDataMobile("Integumentary");
 
   $('.tabButton').click(function(){
     let elementSelected = this.id
     loadImages(elementSelected)
     actionClickButton(elementSelected)
   });
+
+  $('.click-arrow-right').click(function(){
+    let elementSelected = this.id
+    loadImages(elementSelected)
+    actionClickButton(elementSelected)
+  });
+
 });
