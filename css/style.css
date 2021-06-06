@@ -110,6 +110,10 @@ body {
   display: none;
 }
 
+.circle-left-arrow{
+  display: none;
+}
+
 .button-text{
   position: absolute;
   top: 50%;
@@ -185,6 +189,12 @@ body {
     -webkit-transform: rotate(-45deg);
   }
 
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+
   .circle-right-arrow{
     display: block;
     cursor: pointer;
@@ -195,6 +205,18 @@ body {
     background-color: rgba(0,25,54,1) !important;
     border-radius: 100%;
     left: 90%;
+  }
+
+  .circle-left-arrow{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,25,54,1) !important;
+    border-radius: 100%;
+    right: 90%;
   }
 
   .artwork_references{
