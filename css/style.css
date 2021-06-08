@@ -54,6 +54,10 @@ body {
   background-color: #f4f4f4;
   font-family: "Montserrat";
 }
+
+button{
+  border: none;
+}
 .activity-container{
   padding:20px;
   min-width:320px;
@@ -90,7 +94,6 @@ body {
   margin-bottom: 2%;
   border-radius: 10px;
 }
-
 
 .right-cards {
   cursor: pointer;
@@ -132,11 +135,6 @@ body {
   color: white;
 }
 
-.footer{
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
 .img-responsive{
   width: auto;
   height: 100%;
@@ -146,15 +144,19 @@ body {
   height: 500px;/* ask for images  */
 }
 
-.artwork_references{
+.artwork-references{
 	font-size: 22px;
 	color: rgba(74,74,74,1);
 	text-decoration: underline;
 }
 
-.data_button{
-  font-size: 22px;
+.data-button{
+  font-size: 22px
   color: rgba(74,74,74,1);
+}
+
+.artwork-references-mobile{
+  display: none;
 }
 
 @media (max-width: 991px) {
@@ -163,6 +165,10 @@ body {
   }
   .activity-container{
       padding:0px;
+  }
+
+  .hide{
+    display: none;
   }
 
   .mobile-card{
@@ -194,8 +200,8 @@ body {
     -webkit-transform: rotate(135deg);
   }
 
-  .data_button{
-    font-size: 15px;
+  .data-button{
+    font-size: var(--mobile-instruction-fontsize);
     color: rgba(74,74,74,1);
   }
 
@@ -223,8 +229,15 @@ body {
     right: 90%;
   }
 
-  .artwork_references{
+  .artwork-references{
     display: none;    
+  }
+
+  .artwork-references-mobile{
+    display: block;
+    font-size: 15px;
+	  color: rgba(74,74,74,1);
+	  text-decoration: underline;
   }
 
   .left-cards{
@@ -250,11 +263,6 @@ body {
       padding: 20px 30px 0px 30px;
   }
 
-  .footer{
-    padding-top: 10%;
-    font-size: small;
-  }
-
   .feedback{
     margin-bottom:25px;
     font-size:var(--mobile-feedback-fontsize);
@@ -266,6 +274,8 @@ body {
   }
   
   .load-image{
+    width: auto;
+    margin: 2%;
     height: 500px;/* ask for images  */
   }
 
