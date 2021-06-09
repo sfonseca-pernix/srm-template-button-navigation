@@ -159,7 +159,7 @@ button{
   display: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   html,body{
       font-size:12px;
   }
