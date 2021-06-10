@@ -78,34 +78,9 @@
         </d>
         <div class="col-1"></div>
         <div class="col-3 hide">
-          <div class="row">
-            <button class="tabButton left-cards clicked-box" id="integumentary">
-              <p class="button-text">Integumentary</p>
-            </button>
-          </div>
-          <div class="row">
-            <button class="tabButton left-cards" id="muscular">
-              <p class="button-text">Muscular</p>
-            </button>
-          </div>
-          <div class="row">
-            <button class=" tabButton left-cards" id="skeletal">
-              <p class="button-text">Skeletal</p>
-            </button>
-          </div>
-          <div class="row">
-            <button class="tabButton left-cards" id="digestive">
-              <p class="button-text">Digestive</p>
-            </button>
-          </div>
-          <div class="row">
-            <button class="tabButton left-cards" id="lymphatic">
-              <p class="button-text">Lymphatic</p>
-            </button>
-          </div>
-          <div class="row">
-            <button class="tabButton left-cards" id="endocrine">
-              <p class="button-text">Endocrine</p>
+          <div class="row" data-bind="foreach:clickableItemsLeft">
+            <button class="tabButton left-cards" data-bind="attr: { id: img }">
+              <p class="button-text" data-bind="html:text"></p>
             </button>
           </div>
         </div>
@@ -115,34 +90,9 @@
           </div>
         </div>
         <div class="col-3 hide">
-          <div class="row d-flex justify-content-end">
-            <button class="tabButton right-cards" id="nervous">
-              <p class="button-text">Nervous</p>
-            </button>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <button class="tabButton right-cards" id="circulatory">
-              <p class="button-text">Circulatory</p>
-            </button>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <button class="tabButton right-cards" id="urinary">
-              <p class="button-text">Urinary</p>
-            </button>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <button class=" tabButton right-cards" id="respiratory">
-              <p class="button-text">Respiratory</p>
-            </button>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <button class="tabButton right-cards" id="female_reproductive">
-              <p class="button-text">Female Reproductive</p>
-            </button>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <button class="tabButton right-cards" id="male_reproductive">
-              <p class="button-text">Male Reproductive</p>
+          <div class="row d-flex justify-content-end" data-bind="foreach:clickableItemsRight">
+            <button class="tabButton right-cards" data-bind="attr: { id: img }">
+              <p class="button-text" data-bind="html:text"></p>
             </button>
           </div>
         </div>

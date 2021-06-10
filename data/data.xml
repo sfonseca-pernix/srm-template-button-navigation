@@ -7,4 +7,174 @@
     <mobile>Select the term and then select its corresponding definition to match. To unmatch, swipe the matched item.</mobile>
   </instruction>
   
+  <items>
+
+    <item>
+      <clickable>
+        <img>
+          <src>integumentary.png</src>
+          <alt>Integumentary image</alt>
+        </img>
+        <title>Integumentary</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+    <item>
+      <clickable>
+        <img>
+          <src>muscular.png</src>
+          <alt>Muscular image</alt>
+        </img>
+        <title>Muscular</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+    <item>
+      <clickable>
+        <img>
+          <src>skeletal.png</src>
+          <alt>Skeletal image</alt>
+        </img>
+        <title>Skeletal</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+    <item>
+      <clickable>
+        <img>
+          <src>disgestive.png</src>
+          <alt>Digestive image</alt>
+        </img>
+        <title>Digestive</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+    <item>
+      <clickable>
+        <img>
+          <src>lymphatic.png</src>
+          <alt>Lymphatic image</alt>
+        </img>
+        <title>Lymphatic</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+    <item>
+      <clickable>
+        <img>
+          <src>endocrine.png</src>
+          <alt>Endocrine image</alt>
+        </img>
+        <title>Endocrine</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+     <item>
+      <clickable>
+        <img>
+          <src>nervous.png</src>
+          <alt>Nervous image</alt>
+        </img>
+        <title>Nervous</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+     <item>
+      <clickable>
+        <img>
+          <src>circulatory.png</src>
+          <alt>Circulatory image</alt>
+        </img>
+        <title>Circulatory</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+    
+     <item>
+      <clickable>
+        <img>
+          <src>respiratory.png</src>
+          <alt>Respiratory image</alt>
+        </img>
+        <title>Respiratory</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+    <item>
+      <clickable>
+        <img>
+          <src>urinary.png</src>
+          <alt>Urinary image</alt>
+        </img>
+        <title>Urinary</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+     <item>
+      <clickable>
+        <img>
+          <src>female_reproductive.png</src>
+          <alt>Female Reproductive image</alt>
+        </img>
+        <title>Female Reproductive</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+
+    <item>
+      <clickable>
+        <img>
+          <src>male_reproductive.png</src>
+          <alt>Male Reproductive image</alt>
+        </img>
+        <title>Male Reproductive</title>
+        <text>Carcinogens are substances that have the potential to cause cancer. These
+                substances exist all around us and develop naturally or are created by humans. Review the information on
+                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        </text>
+      </clickable>
+    </item>
+  </items>
 </dataset>
