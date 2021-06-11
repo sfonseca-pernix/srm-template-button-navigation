@@ -30,10 +30,7 @@
           <alt>Muscular image</alt>
         </img>
         <title>Muscular</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
-        </text>
+        <text>Carcinogens are substances that have the potential to cause cancer. </text>
       </clickable>
     </item>
 
@@ -44,7 +41,7 @@
           <alt>Skeletal image</alt>
         </img>
         <title>Skeletal</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
+        <text>These
                 substances exist all around us and develop naturally or are created by humans. Review the information on
                 examples of natural and created carcinogenic agents found in the environment to complete this activity.
         </text>
@@ -54,13 +51,12 @@
     <item>
       <clickable>
         <img>
-          <src>disgestive.png</src>
+          <src>digestive.png</src>
           <alt>Digestive image</alt>
         </img>
         <title>Digestive</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        <text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptas commodi dolore modi veniam impedit, architecto porro 
+        reiciendis repudiandae fuga in et repellat. Voluptatum quasi dolorum, praesentium repudiandae voluptas nesciunt?
         </text>
       </clickable>
     </item>
@@ -72,9 +68,8 @@
           <alt>Lymphatic image</alt>
         </img>
         <title>Lymphatic</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        <text>The lymphatic system, or lymphoid system, is an organ system in vertebrates that is part of the circulatory system and the immune system. It is made up of a large network of lymph, lymphatic vessels, lymph nodes, lymphatic or lymphoid organs, and lymphoid tissues.[1][2] The vessels carry a clear fluid called lymph 
+        (the Latin word lympha refers to the deity of fresh water, "Lympha")[3] towards the heart.
         </text>
       </clickable>
     </item>
@@ -86,9 +81,9 @@
           <alt>Endocrine image</alt>
         </img>
         <title>Endocrine</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        <text>The endocrine system is a messenger system comprising feedback loops of the hormones released 
+            by internal glands of an organism directly into the circulatory system, regulating distant target organs.
+         In vertebrates, the hypothalamus is the neural control center for all endocrine systems.
         </text>
       </clickable>
     </item>
@@ -100,9 +95,8 @@
           <alt>Nervous image</alt>
         </img>
         <title>Nervous</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        <text>The nervous system is a complex collection of nerves and specialized cells known as neurons that transmit signals between different parts of the body. It is essentially the body's electrical wiring. 
+          Structurally, the nervous system has two components: the central nervous system and the peripheral nervous system.
         </text>
       </clickable>
     </item>
@@ -128,9 +122,9 @@
           <alt>Respiratory image</alt>
         </img>
         <title>Respiratory</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        <text>The respiratory system is the network of organs and tissues that help you breathe. 
+        It includes your airways, lungs, and blood vessels. The muscles that power your lungs are also part of 
+        the respiratory system. These parts work together to move oxygen throughout the body and clean out waste gases like carbon dioxide.
         </text>
       </clickable>
     </item>
@@ -142,9 +136,9 @@
           <alt>Urinary image</alt>
         </img>
         <title>Urinary</title>
-        <text>Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+        <text>The urinary system, also known as the renal system or urinary tract, consists of the kidneys, 
+          ureters, bladder, and the urethra. The purpose of the urinary system is to eliminate waste from the body, regulate blood volume and blood pressure, control levels of electrolytes and metabolites, and regulate blood pH. 
+          The urinary tract is the body's drainage system for the eventual removal of urine.
         </text>
       </clickable>
     </item>
@@ -177,4 +171,5 @@
       </clickable>
     </item>
   </items>
+
 </dataset>

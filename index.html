@@ -2,7 +2,7 @@
 <html l lang='en'>
 
 <head>
-  <title>Matching Responsive</title>
+  <title>Button Navigation</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
@@ -79,8 +79,8 @@
         <div class="col-1"></div>
         <div class="col-3 hide">
           <div class="row" data-bind="foreach:clickableItemsLeft">
-            <button class="tabButton left-cards" data-bind="attr: { id: img }">
-              <p class="button-text" data-bind="html:text"></p>
+            <button class="tabButton left-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+              <p class="button-text" data-bind="html:title"></p>
             </button>
           </div>
         </div>
@@ -91,8 +91,8 @@
         </div>
         <div class="col-3 hide">
           <div class="row d-flex justify-content-end" data-bind="foreach:clickableItemsRight">
-            <button class="tabButton right-cards" data-bind="attr: { id: img }">
-              <p class="button-text" data-bind="html:text"></p>
+            <button class="tabButton right-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+              <p class="button-text" data-bind="html:title"></p>
             </button>
           </div>
         </div>
@@ -102,9 +102,7 @@
           <div class="row">
             <div class="col-1"></div>
             <div class="col-10">
-              <p class="data-button">Carcinogens are substances that have the potential to cause cancer. These
-                substances exist all around us and develop naturally or are created by humans. Review the information on
-                examples of natural and created carcinogenic agents found in the environment to complete this activity.
+              <p class="data-button" id="itemText">
               </p><br>
               <a class="artwork-references">Artwork References</a>
             </div>
