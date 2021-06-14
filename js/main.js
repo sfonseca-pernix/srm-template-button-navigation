@@ -30,21 +30,31 @@ function clickableItemModel(index,data){
   this.text = data.text;
 }
 
+function setMobileData(data){
+  let elementTitle = document.getElementById("mobile-button-text");
+  let elementText = document.getElementById("itemText");
+  loadImages(data.img)
+  elementTitle.innerHTML = data.title;
+  elementText.innerHTML = data.text;
+}
+
 function ButtonNavigationTemplate() {
 
   this.title = ko.observable();
   this.instruction = ko.observable();
   this.text = ko.observable();
-  this.feedback = ko.observable();
   this.clickableItemsLeft = ko.observableArray([]);
   this.clickableItemsRight = ko.observableArray([]);
   this.selectedClickableItem = ko.observable();
-
+  this.indexMobile = 0;
   this.scorm = pipwerks.SCORM; // shortcut
 
   this.scorm.version = "1.2";
 
   var ref = this;
+  let mobileItems = [];
+  let rightArrow = document.getElementById("right-arrow");
+  let leftArrow = document.getElementById("left-arrow");
 
   this.init = function () {
     this.loadXML("./data/data.xml", this.xmlLoaded.bind(this));
@@ -67,10 +77,13 @@ function ButtonNavigationTemplate() {
       }else{
         rightItems.push(new clickableItemModel(i,data.items.item[i].clickable));
       }
+
     }
 
     this.clickableItemsLeft(leftItems);
     this.clickableItemsRight(rightItems);
+    mobileItems = leftItems.concat(rightItems);
+    setMobileData(data.items.item[0].clickable);
     addClickedBoxClass(data.items.item[0].clickable);
   }
 
@@ -79,6 +92,34 @@ function ButtonNavigationTemplate() {
     loadItemText($data);
     actionClickButton($data)
     ref.selectedClickableItem($data);
+  }
+
+  this.selectClickableRightItemHandlerMobile = function($data){
+
+    if (this.indexMobile < mobileItems.length-1){
+      leftArrow.classList.add("show-arrow")
+      leftArrow.classList.remove("hide-arrow")
+      this.indexMobile += 1;
+
+      if (this.indexMobile == mobileItems.length-1) {
+        rightArrow.classList.add("hide-arrow");
+        rightArrow.classList.remove("show-arrow");
+      }
+      setMobileData(mobileItems[this.indexMobile]);
+    }
+  }
+
+  this.selectClickableLeftItemHandlerMobile = function($data){
+    if (this.indexMobile >= 0){
+      rightArrow.classList.add("show-arrow")
+      rightArrow.classList.remove("hide-arrow")
+      this.indexMobile -= 1;
+      if(this.indexMobile == 0){
+        leftArrow.classList.add("hide-arrow");
+        leftArrow.classList.remove("show-arrow");
+      }
+      setMobileData(mobileItems[this.indexMobile]);
+    }
   }
 
   this.init();
