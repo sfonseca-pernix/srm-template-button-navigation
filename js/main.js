@@ -120,7 +120,7 @@ function ButtonNavigationTemplate() {
       }
       setMobileData(mobileItems[this.indexMobile]);
     }
-  }
+  } 
 
   this.init();
 }
