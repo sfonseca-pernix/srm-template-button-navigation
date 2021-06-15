@@ -8,13 +8,11 @@
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/settings.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <script src="lib/SCORM_API_wrapper.js"></script>
   <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/bootstrap/js/popper.min.js"></script>
+  <script src="lib/SCORM_API_wrapper.js"></script>
   <script src="lib/knockout/knockout-3.5.1.js"></script>
-
   <script src="js/util.js"></script>
   <script src="js/main.js"></script>
 </head>
@@ -61,15 +59,17 @@
       </div>
 
       <h1 class="activity-title" data-bind="html:title"></h1>
-      <div data-bind="with:instruction">
-        <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()"></p>
-        <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()"></p>
+      <div  class="row" data-bind="with:instruction">
+        <div class="col">
+          <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()"></p>
+          <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()"></p>
+        </div>
       </div>
       <span class="artwork-references-mobile">Artwork References</span>
     </header>
     <section>
       <div class="row">
-        <d class="d-flex justify-content-center">
+        <d class="col-12 d-flex justify-content-center">
           <div class="mobile-card">
             <div class="circle-left-arrow hide-arrow" id="left-arrow" data-bind="click:selectClickableLeftItemHandlerMobile">
               <i class="arrow left mt-3"></i>
@@ -88,7 +88,7 @@
             </button>
           </div>
         </div>
-        <div class="col-xs-10 col-lg-4 d-flex align-items-center justify-content-center">
+        <div class="col-xs-10 col-lg-10 col-xl-4 d-flex align-items-center justify-content-center">
           <div class="row load-image">
             <img id="loadImage" class="img-responsive">
           </div>

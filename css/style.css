@@ -50,8 +50,7 @@ html,body{
 }
 
 body {
-  margin: 0;
-  background-color: #f4f4f4;
+  background-color:#F4F4F4 !important ;
   font-family: "Montserrat";
 }
 
@@ -141,7 +140,7 @@ button{
 }
 
 .load-image{
-  height: 500px;/* ask for images  */
+  height: auto;/* ask for images  */
 }
 
 .artwork-references{
@@ -151,6 +150,7 @@ button{
 }
 
 .data-button{
+  margin: 0;
   font-size: 22px;
   color: rgba(74,74,74,1);
 }
@@ -167,12 +167,10 @@ button{
   display: block !important;
 }
 
-@media (max-width: 812px) {
+@media (max-width: 1024px) {
   html,body{
-      font-size:12px;
-  }
-  .activity-container{
-      padding:0px;
+    font-size:12px;
+    overflow-y: scroll;
   }
 
   .hide{
@@ -208,7 +206,7 @@ button{
   .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-    margin-left: 17%;
+    margin-left: 22%;
   }
 
   .data-button{
@@ -223,8 +221,8 @@ button{
     width: 45px;
     height: 45px;
     background-color: rgba(0,25,54,1) !important;
-    border-radius: 100%;
-    left: 90%;
+    border-radius: 50%;
+    left: 80%;
   }
 
   .circle-left-arrow{
@@ -234,8 +232,8 @@ button{
     width: 45px;
     height: 45px;
     background-color: rgba(0,25,54,1) !important;
-    border-radius: 100%;
-    right: 90%;
+    border-radius: 50%;
+    right: 92%;
   }
 
   .artwork-references{
@@ -267,14 +265,6 @@ button{
   .activity-instruction{
       width:100%;
       font-size:var(--mobile-instruction-fontsize);
-  }
-  .activity-content{
-      padding: 20px 30px 0px 30px;
-  }
-
-  .feedback{
-    margin-bottom:25px;
-    font-size:var(--mobile-feedback-fontsize);
   }
 
   .img-responsive{
