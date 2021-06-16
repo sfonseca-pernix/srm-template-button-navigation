@@ -38,6 +38,11 @@ function setMobileData(data){
   elementText.innerHTML = data.text;
 }
 
+function hideAndShowArrow(element,actionAdd,actionRemove){
+  element.classList.add(actionAdd);
+  element.classList.remove(actionRemove);
+}
+
 function ButtonNavigationTemplate() {
 
   this.title = ko.observable();
@@ -51,7 +56,7 @@ function ButtonNavigationTemplate() {
 
   this.scorm.version = "1.2";
 
-  var ref = this;
+  let ref = this;
   let mobileItems = [];
   let rightArrow = document.getElementById("right-arrow");
   let leftArrow = document.getElementById("left-arrow");
@@ -95,15 +100,12 @@ function ButtonNavigationTemplate() {
   }
 
   this.selectClickableRightItemHandlerMobile = function($data){
-
     if (this.indexMobile < mobileItems.length-1){
-      leftArrow.classList.add("show-arrow")
-      leftArrow.classList.remove("hide-arrow")
+      hideAndShowArrow(leftArrow,"show-arrow","hide-arrow")
       this.indexMobile += 1;
 
       if (this.indexMobile == mobileItems.length-1) {
-        rightArrow.classList.add("hide-arrow");
-        rightArrow.classList.remove("show-arrow");
+        hideAndShowArrow(rightArrow,"hide-arrow","show-arrow")
       }
       setMobileData(mobileItems[this.indexMobile]);
     }
@@ -111,12 +113,10 @@ function ButtonNavigationTemplate() {
 
   this.selectClickableLeftItemHandlerMobile = function($data){
     if (this.indexMobile >= 0){
-      rightArrow.classList.add("show-arrow")
-      rightArrow.classList.remove("hide-arrow")
+      hideAndShowArrow(rightArrow,"show-arrow","hide-arrow")
       this.indexMobile -= 1;
       if(this.indexMobile == 0){
-        leftArrow.classList.add("hide-arrow");
-        leftArrow.classList.remove("show-arrow");
+        hideAndShowArrow(leftArrow,"hide-arrow","show-arrow")
       }
       setMobileData(mobileItems[this.indexMobile]);
     }

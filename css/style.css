@@ -28,7 +28,7 @@
 *:focus:focus-visible{
   outline:solid 4px  #000 !important;
   outline-offset:3px;
-  }
+}
 
 .setting-button{
   top:10px;
@@ -84,7 +84,7 @@ button{
   padding:20px 50px;
 }
 
-.left-cards {
+.left-cards{
   cursor: pointer;
   background-color: rgba(255,255,255,1);
 	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
@@ -94,7 +94,7 @@ button{
   border-radius: 10px;
 }
 
-.right-cards {
+.right-cards{
   cursor: pointer;
   background-color: rgba(255,255,255,1);
 	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
@@ -140,13 +140,14 @@ button{
 }
 
 .load-image{
-  height: auto;/* ask for images  */
+  height: 500px;/* ask for images  */
 }
 
 .artwork-references{
+  cursor: pointer;
 	font-size: 22px;
 	color: rgba(74,74,74,1);
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 .data-button{
@@ -170,7 +171,6 @@ button{
 @media (max-width: 1024px) {
   html,body{
     font-size:12px;
-    overflow-y: scroll;
   }
 
   .hide{
@@ -189,21 +189,21 @@ button{
     border-radius: 10px;
   }
 
-  .arrow {
+  .arrow{
     border: solid white;
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 8px;
   }
   
-  .right {
+  .right{
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     margin-right: 17%;
 
   }
 
-  .left {
+  .left{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     margin-left: 22%;
@@ -275,7 +275,7 @@ button{
   .load-image{
     width: auto;
     margin: 2%;
-    height: auto;/* ask for images  */
+    height: 500px;
   }
 
   .btn.btn-primary{
