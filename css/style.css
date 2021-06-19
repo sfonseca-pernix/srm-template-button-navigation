@@ -276,15 +276,13 @@ button{
   }
 
   .img-responsive{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
   }
   
   .load-image{
     width: auto;
     margin: 2%;
-    height: 95%;
-    width: 95%;
   }
 
   .btn.btn-primary{
