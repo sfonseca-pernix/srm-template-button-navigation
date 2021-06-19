@@ -86,7 +86,7 @@ button{
 
 .left-cards{
   cursor: pointer;
-  background-color: rgba(255,255,255,1);
+  background-color: var(--color3);
 	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 	width: 306px;
 	height: 112px;
@@ -96,7 +96,7 @@ button{
 
 .right-cards{
   cursor: pointer;
-  background-color: rgba(255,255,255,1);
+  background-color: var(--color3);;
 	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 	width: 306px;
 	height: 112px;
@@ -140,7 +140,8 @@ button{
 }
 
 .load-image{
-  height: 500px;/* ask for images  */
+  width: auto;
+  height: auto;/* ask for images  */
 }
 
 .artwork-references{
@@ -168,7 +169,7 @@ button{
   display: block !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   html,body{
     font-size:12px;
   }
@@ -275,7 +276,8 @@ button{
   .load-image{
     width: auto;
     margin: 2%;
-    height: 500px;
+    height: 90%;
+    width: 90%;
   }
 
   .btn.btn-primary{
