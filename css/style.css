@@ -58,11 +58,13 @@ button{
   border: none;
 }
 
-
 .box-buttons p{
   position: relative;
   padding: 5%;
+  min-width: 306px;
+  max-width: 306px;
 }
+
 .activity-container{
   padding:20px;
   min-width:320px;
@@ -90,23 +92,14 @@ button{
   padding:20px 50px;
 }
 
-.left-cards{
+.data-cards{
   cursor: pointer;
   background-color: var(--color3);
 	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
-	width: 306px;
   margin-bottom: 2%;
   border-radius: 10px;
 }
 
-.right-cards{
-  cursor: pointer;
-  background-color: var(--color3);;
-	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
-	width: 306px;
-  margin-bottom: 2%;
-  border-radius: 10px;
-}
 
 .mobile-card{
   display: none;
@@ -187,11 +180,19 @@ button{
     cursor: pointer;
     background-color: rgba(0,25,54,1) !important;
     color: white;
+    min-width: 306px !important;
+    max-width: 306px !important;
+    min-height: 112px;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
-    width: 306px;
-    height: 112px;
     margin-bottom: 2%;
     border-radius: 10px;
+  }
+
+  .mobile-card p{
+    position: relative;
+    padding: 5%;
+    max-height: 112px !important;
+    text-align: center;
   }
 
   .arrow{

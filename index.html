@@ -83,7 +83,7 @@
         <div class="col-1"></div>
         <div class="col-3 hide">
           <div class="row box-buttons" data-bind="foreach:clickableItemsLeft">
-            <button class="tabButton left-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+            <button class="tabButton data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
               <p class="button-text" data-bind="html:title"></p>
             </button>
           </div>
@@ -95,7 +95,7 @@
         </div>
         <div class="col-3 hide">
           <div class="row d-flex justify-content-end box-buttons" data-bind="foreach:clickableItemsRight">
-            <button class="tabButton right-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+            <button class="tabButton data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
               <p class="button-text" data-bind="html:title"></p>
             </button>
           </div>
