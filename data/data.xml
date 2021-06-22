@@ -3,7 +3,7 @@
   <title>Overview of the human organ systems</title>
  
    <instruction>
-    <desktop>Select de buttons to learn more about the topic. Replay this interaction as many times as you need. There is no time limit. This activity is not graded.</desktop>
+    <desktop>Select the buttons to learn more about the topic. Replay this interaction as many times as you need. There is no time limit. This activity is not graded.</desktop>
     <mobile>Select the term and then select its corresponding definition to match. To unmatch, swipe the matched item.</mobile>
   </instruction>
   
@@ -26,7 +26,7 @@
     <item>
       <clickable>
         <img>
-          <src>prove.jpg</src>
+          <src>muscular.png</src>
           <alt>Muscular image</alt>
         </img>
         <title>Muscular</title>
