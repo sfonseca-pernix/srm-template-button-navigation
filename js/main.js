@@ -43,6 +43,18 @@ function hideAndShowArrow(element,actionAdd,actionRemove){
   element.classList.remove(actionRemove);
 }
 
+function getBiggerTittleSize(data){
+  let tittleLenght = data[0].title.length;
+  for( title of data){
+    if (tittleLenght <= title.title.length){
+      tittleLenght = title.title.length
+    }
+  }
+  console.log(tittleLenght)
+  return tittleLenght;
+
+}
+
 function ButtonNavigationTemplate() {
 
   this.title = ko.observable();
@@ -85,6 +97,8 @@ function ButtonNavigationTemplate() {
 
     }
 
+
+    getBiggerTittleSize(leftItems.concat(rightItems))
     this.clickableItemsLeft(leftItems);
     this.clickableItemsRight(rightItems);
     mobileItems = leftItems.concat(rightItems);

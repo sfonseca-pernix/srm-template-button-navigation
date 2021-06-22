@@ -80,27 +80,25 @@
             <p class="button-text" id="mobile-button-text"></p>
           </div>
         </d>
-        <div class="col-1"></div>
-        <div class="col-3 hide">
-          <div class="row box-buttons" data-bind="foreach:clickableItemsLeft">
-            <button class="tabButton data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+        <div class="offset-xl-1 col-xl-3 hide">
+          <div class="row box-buttons " data-bind="foreach:clickableItemsLeft">
+            <button class="tabButton data-cards " data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }" >
               <p class="button-text" data-bind="html:title"></p>
             </button>
           </div>
         </div>
-        <div class="col-xs-10 ccol-sm-10 col-md-10 col-lg-10 col-xl-4 d-flex align-items-center justify-content-center">
-          <div class="row load-image">
+        <div class=" col-lg-12 col-xl-4 d-flex align-items-center justify-content-center" >
+          <div class="load-image">
             <img id="loadImage" class="img-responsive">
           </div>
         </div>
-        <div class="col-3 hide">
+        <div class="col-xl-3 hide">
           <div class="row d-flex justify-content-end box-buttons" data-bind="foreach:clickableItemsRight">
             <button class="tabButton data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
               <p class="button-text" data-bind="html:title"></p>
             </button>
           </div>
         </div>
-        <div class="col-1"></div>
       </div>
       <div class="mt-5">
           <div class="row">
