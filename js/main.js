@@ -55,8 +55,7 @@ function getBiggerTittleSize(data){
   return result;
 }
 
-function getHeightForButton(data){
-  var sheet = document.createElement('style');
+function createButtonTemporary(data){
   let button =  document.createElement("button");
   button.classList.add("data-cards");
   button.classList.add("d-flex");
@@ -64,17 +63,20 @@ function getHeightForButton(data){
   let p = document.createElement("p");
   p.classList.add("button-text");
   var text = document.createTextNode(getBiggerTittleSize(data));
+  p.appendChild(text);
   button.appendChild(p);
   p.style.visibility = "hidden";
   document.body.appendChild(button);
-  p.appendChild(text);
-  // console.log(p)
-  var str = ":root{";
-  str += "--buttonSize:" + (p.clientHeight-70).toString() + "px;";
-  str += "}";
+
+  return p;
+}
+
+function getHeightForButton(data){
+  var sheet = document.createElement('style');
+  p = createButtonTemporary(data);
+  var str = ":root{--buttonSize:" + (p.clientHeight-70).toString() + "px;}"; 
   sheet.innerHTML = str;
   document.head.appendChild(sheet);
-  console.log(sheet)
 }
 
 function ButtonNavigationTemplate() {
@@ -87,8 +89,7 @@ function ButtonNavigationTemplate() {
   this.selectedClickableItem = ko.observable();
   this.indexMobile = 0;
   this.biggerTitle = "";
-  this.scorm = pipwerks.SCORM; // shortcut
-
+  this.scorm = pipwerks.SCORM;
   this.scorm.version = "1.2";
 
   let ref = this;

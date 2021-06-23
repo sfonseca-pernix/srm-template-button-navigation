@@ -176,22 +176,20 @@ button{
 
   .mobile-card{
     display: block;
-    cursor: pointer;
     background-color: var(--color1) !important;
     color: #F4F4F4;
     min-width: 306px !important;
     max-width: 306px !important;
     min-height: 112px;
-    height: var(--buttonSize);
-    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
     margin-bottom: 5%;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
     border-radius: 10px;
+    padding: 2%;
   }
 
   .mobile-card p{
+    height: var(--buttonSize);
     position: relative;
-    padding: 5%;
-    max-height: 112px !important;
     text-align: center;
   }
 
