@@ -45,14 +45,14 @@ function hideAndShowArrow(element,actionAdd,actionRemove){
 
 function getBiggerTittleSize(data){
   let titleLenght = data[0].title.length;
-  let title = ""
+  let result = ""
   for( title of data){
     if (titleLenght <= title.title.length){
-      title = title.title
+      titleLenght = title.title.length;
+      result = title.title;
     }
   }
-  
-  return title;
+  return result;
 }
 
 function getHeightForButton(data){
@@ -68,6 +68,7 @@ function getHeightForButton(data){
   p.style.visibility = "hidden";
   document.body.appendChild(button);
   p.appendChild(text);
+  // console.log(p)
   var str = ":root{";
   str += "--buttonSize:" + (p.clientHeight-70).toString() + "px;";
   str += "}";
@@ -164,7 +165,7 @@ ButtonNavigationTemplate.prototype = new Util();
 ButtonNavigationTemplate.prototype.constructor = ButtonNavigationTemplate;
 
 
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
   var obj = new ButtonNavigationTemplate();
   ko.applyBindings(obj, $("#button_navigation_template")[0])
 });
