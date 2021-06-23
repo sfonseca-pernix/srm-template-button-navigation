@@ -60,6 +60,7 @@ function createButtonTemporary(data){
   button.classList.add("data-cards");
   button.classList.add("d-flex");
   button.classList.add("justify-content-end")
+  button.setAttribute("id", "tempButton")
   let p = document.createElement("p");
   p.classList.add("button-text");
   var text = document.createTextNode(getBiggerTittleSize(data));
@@ -72,11 +73,13 @@ function createButtonTemporary(data){
 }
 
 function getHeightForButton(data){
-  var sheet = document.createElement('style');
+  let sheet = document.createElement('style');
   p = createButtonTemporary(data);
-  var str = ":root{--buttonSize:" + (p.clientHeight-70).toString() + "px;}"; 
+  let str = ":root{--buttonSize:" + (p.clientHeight-70).toString() + "px;}"; 
   sheet.innerHTML = str;
   document.head.appendChild(sheet);
+  let tempButton = document.getElementById('tempButton');
+  tempButton.remove();
 }
 
 function ButtonNavigationTemplate() {
@@ -169,4 +172,5 @@ ButtonNavigationTemplate.prototype.constructor = ButtonNavigationTemplate;
 $(document).ready(function () {
   var obj = new ButtonNavigationTemplate();
   ko.applyBindings(obj, $("#button_navigation_template")[0])
+  
 });

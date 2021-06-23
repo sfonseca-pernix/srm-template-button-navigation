@@ -45,10 +45,6 @@
   border: 0;
 }
 
-html,body{
-  font-size:16px;
-}
-
 body {
   background-color:#F4F4F4 !important ;
   font-family: "Montserrat";
@@ -68,7 +64,7 @@ button{
 }
 
 .activity-container{
-  padding:20px;
+  padding: 2%;
   min-width:320px;
 }
 .activity-header{
@@ -88,10 +84,6 @@ button{
   font-size: var(--desktop-instruction-fontsize);
   margin-top: 20px;
   width: 100%;
-}
-
-.activity-content{
-  padding:20px 50px;
 }
 
 .data-cards{
@@ -162,8 +154,6 @@ button{
 .show-arrow{
   display: block !important;
 }
-
-
 
 @media only screen and (max-width: 1199px) {
   html,body{
@@ -279,11 +269,5 @@ button{
   .load-image{
     position: relative;
     margin: 2%;
-  }
-
-  .btn.btn-primary{
-    font-size: var(--mobile-button-fontsize);
-    min-width:var(--mobile-button-width);
-    min-height:var(--mobile-button-height);
   }
 }
