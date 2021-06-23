@@ -44,15 +44,36 @@ function hideAndShowArrow(element,actionAdd,actionRemove){
 }
 
 function getBiggerTittleSize(data){
-  let tittleLenght = data[0].title.length;
+  let titleLenght = data[0].title.length;
+  let title = ""
   for( title of data){
-    if (tittleLenght <= title.title.length){
-      tittleLenght = title.title.length
+    if (titleLenght <= title.title.length){
+      title = title.title
     }
   }
-  console.log(tittleLenght)
-  return tittleLenght;
+  
+  return title;
+}
 
+function getHeightForButton(data){
+  var sheet = document.createElement('style');
+  let button =  document.createElement("button");
+  button.classList.add("data-cards");
+  button.classList.add("d-flex");
+  button.classList.add("justify-content-end")
+  let p = document.createElement("p");
+  p.classList.add("button-text");
+  var text = document.createTextNode(getBiggerTittleSize(data));
+  button.appendChild(p);
+  p.style.visibility = "hidden";
+  document.body.appendChild(button);
+  p.appendChild(text);
+  var str = ":root{";
+  str += "--buttonSize:" + (p.clientHeight-70).toString() + "px;";
+  str += "}";
+  sheet.innerHTML = str;
+  document.head.appendChild(sheet);
+  console.log(sheet)
 }
 
 function ButtonNavigationTemplate() {
@@ -64,6 +85,7 @@ function ButtonNavigationTemplate() {
   this.clickableItemsRight = ko.observableArray([]);
   this.selectedClickableItem = ko.observable();
   this.indexMobile = 0;
+  this.biggerTitle = "";
   this.scorm = pipwerks.SCORM; // shortcut
 
   this.scorm.version = "1.2";
@@ -94,14 +116,13 @@ function ButtonNavigationTemplate() {
       }else{
         rightItems.push(new clickableItemModel(i,data.items.item[i].clickable));
       }
-
     }
 
-
-    getBiggerTittleSize(leftItems.concat(rightItems))
+    mobileItems = leftItems.concat(rightItems);
+    this.biggerTitle = getBiggerTittleSize(mobileItems)
+    getHeightForButton(mobileItems)
     this.clickableItemsLeft(leftItems);
     this.clickableItemsRight(rightItems);
-    mobileItems = leftItems.concat(rightItems);
     setMobileData(data.items.item[0].clickable);
     addClickedBoxClass(data.items.item[0].clickable);
   }
@@ -134,8 +155,8 @@ function ButtonNavigationTemplate() {
       }
       setMobileData(mobileItems[this.indexMobile]);
     }
-  } 
-
+  }
+  
   this.init();
 }
 
@@ -143,7 +164,7 @@ ButtonNavigationTemplate.prototype = new Util();
 ButtonNavigationTemplate.prototype.constructor = ButtonNavigationTemplate;
 
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   var obj = new ButtonNavigationTemplate();
   ko.applyBindings(obj, $("#button_navigation_template")[0])
 });

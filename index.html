@@ -77,13 +77,13 @@
             <div class="circle-right-arrow ml-5 show-arrow" id="right-arrow" data-bind="click:selectClickableRightItemHandlerMobile">
               <i class="arrow right m-3"></i>
             </div>
-            <p class="button-text" id="mobile-button-text"></p>
+            <p class="button-text d-flex align-items-center justify-content-center" id="mobile-button-text"></p>
           </div>
         </div>
         <div class=" offset-xl-1 col-xl-3 hide">
           <div class="row box-buttons" data-bind="foreach:clickableItemsLeft">
-            <button class="data-cards d-flex justify-content-end" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }" >
-              <p class="button-text" data-bind="html:title"></p>
+            <button class="data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }" >
+              <p class="button-text d-flex align-items-center justify-content-center" data-bind="html:title"></p>
             </button>
           </div>
         </div>
@@ -92,8 +92,8 @@
         </div>
         <div class=" offset-xl-12 col-xl-3 hide" >
           <div class="row d-flex justify-content-end box-buttons" data-bind="foreach:clickableItemsRight">
-            <button class="data-cards d-flex justify-content-end" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
-              <p class="button-text" data-bind="html:title"></p>
+            <button class="data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+              <p class="button-text d-flex align-items-center justify-content-center" data-bind="html:title"></p>
             </button>
           </div>
         </div>
