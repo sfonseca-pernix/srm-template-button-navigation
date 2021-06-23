@@ -75,7 +75,7 @@ function createButtonTemporary(data){
 function getHeightForButton(data){
   let sheet = document.createElement('style');
   p = createButtonTemporary(data);
-  let str = ":root{--buttonSize:" + (p.clientHeight-70).toString() + "px;}"; 
+  let str = ":root{--buttonSize:" + (p.clientHeight-40).toString() + "px;}"; 
   sheet.innerHTML = str;
   document.head.appendChild(sheet);
   let tempButton = document.getElementById('tempButton');
