@@ -65,8 +65,9 @@ button{
 
 .activity-container{
   padding: 2%;
-  min-width:320px;
+  min-width: 320px;
 }
+
 .activity-header{
   padding:20px 50px;
   position:relative;
@@ -94,16 +95,8 @@ button{
   border-radius: 10px;
 }
 
-.mobile-card{
-  display: none;
-}
-
-.circle-right-arrow{
-  display: none;
-}
-
-.circle-left-arrow{
-  display: none;
+.mobile-screen{
+  display: none !important;
 }
 
 .button-text{
@@ -163,6 +156,10 @@ button{
   .hide{
     display: none;
   }
+  
+  .mobile-screen{
+    display: block !important;
+  }
 
   .mobile-card{
     display: block;
@@ -174,33 +171,14 @@ button{
     margin-bottom: 5%;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
     border-radius: 10px;
-    padding: 2%;
+    padding: 1%;
   }
 
   .mobile-card p{
     height: var(--buttonSize);
+    top: 50% !important;
     position: relative;
     text-align: center;
-  }
-
-  .arrow{
-    border: solid white;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 8px;
-  }
-  
-  .right{
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    margin-right: 17%;
-
-  }
-
-  .left{
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    margin-left: 22%;
   }
 
   .data-button{
@@ -209,25 +187,17 @@ button{
   }
 
   .circle-right-arrow{
+    display: block !important;
     cursor: pointer;
     position: absolute;
-    top: 30%;
-    width: 45px;
-    height: 45px;
-    background-color: var(--color1) !important;
-    border-radius: 50%;
-    left: 80%;
+    left: 78%;
   }
 
   .circle-left-arrow{
+    display: block !important;
     cursor: pointer;
     position: absolute;
-    top: 30%;
-    width: 45px;
-    height: 45px;
-    background-color: var(--color1) !important;
-    border-radius: 50%;
-    right: 92%;
+    right: 90%;
   }
 
   .artwork-references{
@@ -270,4 +240,25 @@ button{
     position: relative;
     margin: 2%;
   }
+
+  .prev_btn {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .next_btn {
+    background: transparent;
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+
+  .reset_btn {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  circle{
+    fill: var(--color1) !important;
+  } 
+
 }
