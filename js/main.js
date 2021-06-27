@@ -9,9 +9,9 @@ function addClickedBoxClass(data){
 }
 
 function actionClickButton(data){
-  clickedElement = document.getElementsByClassName('clicked-box')[0]
-  clickedElement.classList.remove("clicked-box")
-  addClickedBoxClass(data)
+  clickedElement = document.getElementsByClassName('clicked-box')[0];
+  clickedElement.classList.remove("clicked-box");
+  addClickedBoxClass(data);
 }
 
 function loadDataMobile(option){
@@ -20,7 +20,7 @@ function loadDataMobile(option){
 }
 
 function loadItemText(data){
-  document.getElementById("itemText").innerHTML = data.text
+  document.getElementById("itemText").innerHTML = data.text;
 }
 
 function clickableItemModel(index,data){
@@ -33,7 +33,7 @@ function clickableItemModel(index,data){
 function setMobileData(data){
   let elementTitle = document.getElementById("mobile-button-text");
   let elementText = document.getElementById("itemText");
-  loadImages(data.img)
+  loadImages(data.img);
   elementTitle.innerHTML = data.title;
   elementText.innerHTML = data.text;
 }
@@ -45,7 +45,7 @@ function hideAndShowArrow(element,actionAdd,actionRemove){
 
 function getBiggerTittleSize(data){
   let titleLenght = data[0].title.length;
-  let result = ""
+  let result = "";
   for( title of data){
     if (titleLenght <= title.title.length){
       titleLenght = title.title.length;
@@ -103,7 +103,7 @@ function ButtonNavigationTemplate() {
 
   this.init = function () {
     this.loadXML("./data/data.xml", this.xmlLoaded.bind(this));
-    this.scorm.init()
+    this.scorm.init();
   }
 
   this.xmlLoaded = function (xml) {
@@ -125,8 +125,8 @@ function ButtonNavigationTemplate() {
     }
 
     mobileItems = leftItems.concat(rightItems);
-    this.biggerTitle = getBiggerTittleSize(mobileItems)
-    getHeightForButton(mobileItems)
+    this.biggerTitle = getBiggerTittleSize(mobileItems);
+    getHeightForButton(mobileItems);
     this.clickableItemsLeft(leftItems);
     this.clickableItemsRight(rightItems);
     setMobileData(data.items.item[0].clickable);
@@ -136,18 +136,18 @@ function ButtonNavigationTemplate() {
   this.selectClickableItemHandler = function($data){
     loadImages($data.img);
     loadItemText($data);
-    actionClickButton($data)
+    actionClickButton($data);
     ref.selectedClickableItem($data);
   }
 
   this.selectClickableRightItemHandlerMobile = function($data){
     if (this.indexMobile < mobileItems.length-1){
-      hideAndShowArrow(leftArrow,"show-arrow","hide-arrow")
+      hideAndShowArrow(leftArrow,"show-arrow","hide-arrow");
       this.indexMobile += 1;
 
       if (this.indexMobile == mobileItems.length-1) {
-        hideAndShowArrow(rightArrow,"hide-arrow","show-arrow")
-        hideAndShowArrow(resetArrow,"show-arrow","hide-arrow")
+        hideAndShowArrow(rightArrow,"hide-arrow","show-arrow");
+        hideAndShowArrow(resetArrow,"show-arrow","hide-arrow");
       }
       setMobileData(mobileItems[this.indexMobile]);
     }
@@ -193,6 +193,6 @@ ButtonNavigationTemplate.prototype.constructor = ButtonNavigationTemplate;
 
 $(document).ready(function () {
   var obj = new ButtonNavigationTemplate();
-  ko.applyBindings(obj, $("#button_navigation_template")[0])
+  ko.applyBindings(obj, $("#button_navigation_template")[0]);
   
 });
