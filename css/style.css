@@ -186,6 +186,7 @@ button{
     color: rgba(74,74,74,1);
   }
 
+  .circle-reset-arrow,
   .circle-right-arrow{
     display: block !important;
     cursor: pointer;

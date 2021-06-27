@@ -71,9 +71,9 @@
       <div class="row mobile-screen">
         <div class="col-12 d-flex justify-content-center">
           <div class="mobile-card d-flex align-items-center">
-            <div class="circle-left-arrow hide-arrow" id="left-arrow"
+            <div class="circle-left-arrow" 
               data-bind="click:selectClickableLeftItemHandlerMobile">
-              <button class="prev_btn" title='previous'>
+              <button class="prev_btn hide-arrow" title='previous' id="left-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80 80">
                   <g>
                     <g fill="#001a36" stroke="none" transform="rotate(180 38.5 38.5)" id="leftButton">
@@ -91,12 +91,12 @@
                 </svg>
               </button>
             </div>
-            <div class="circle-right-arrow ml-5 show-arrow" id="right-arrow"
+            <div class="circle-right-arrow ml-5" 
               data-bind="click:selectClickableRightItemHandlerMobile">
-              <!-- <button class="next_btn" title='next'>
+              <button class="next_btn show-arrow" title='next' id="right-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80 80">
                   <g>
-                    <g fill="#001a36" stroke="none" transform="rotate(180 38.5 38.5)" id="rightButton">
+                    <g fill="#001a36" stroke="none" transform="rotate(180 38.5 38.5)" >
                       <circle cx="38.5" cy="38.5" r="38.5" stroke="none" />
                       <circle cx="38.5" cy="38.5" r="38" fill="none" />
                     </g>
@@ -109,9 +109,12 @@
                     </g>
                   </g>
                 </svg>
-              </button> -->
-              <button class="reset_btn hide" title='restart'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+              </button>
+            </div>
+            <div class="circle-reset-arrow ml-5"
+              data-bind="click:returnFirstButtonClick">
+              <button class="reset_btn hide-arrow" title='restart' id="reset-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80 80">
                     <g>
                         <g fill="#e6faff" stroke="#051a34" transform="rotate(180 38.5 38.5)">
                             <circle cx="38.5" cy="38.5" r="38.5" stroke="none" />
@@ -119,14 +122,14 @@
                         </g>
                         <g>
                             <g>
-                                <path fill="#001a36" stroke="#051a34"
+                                <path fill="#fff" stroke="#051a34"
                                     d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
                                     transform="rotate(180 38.5 38.5) translate(17.906 13.826)" />
                             </g>
                         </g>
                         <g>
                             <g>
-                                <path fill="#051a34" stroke="#051a34"
+                                <path fill="#fff" stroke="#051a34"
                                     d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
                                     transform="rotate(180 38.5 38.5) translate(38.906 13.826)" />
                             </g>

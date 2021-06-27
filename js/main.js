@@ -99,6 +99,7 @@ function ButtonNavigationTemplate() {
   let mobileItems = [];
   let rightArrow = document.getElementById("right-arrow");
   let leftArrow = document.getElementById("left-arrow");
+  let resetArrow = document.getElementById("reset-arrow");
 
   this.init = function () {
     this.loadXML("./data/data.xml", this.xmlLoaded.bind(this));
@@ -146,6 +147,7 @@ function ButtonNavigationTemplate() {
 
       if (this.indexMobile == mobileItems.length-1) {
         hideAndShowArrow(rightArrow,"hide-arrow","show-arrow")
+        hideAndShowArrow(resetArrow,"show-arrow","hide-arrow")
       }
       setMobileData(mobileItems[this.indexMobile]);
     }
@@ -153,13 +155,33 @@ function ButtonNavigationTemplate() {
 
   this.selectClickableLeftItemHandlerMobile = function($data){
     if (this.indexMobile >= 0){
-      hideAndShowArrow(rightArrow,"show-arrow","hide-arrow")
+      hideAndShowArrow(rightArrow,"show-arrow","hide-arrow");
       this.indexMobile -= 1;
       if(this.indexMobile == 0){
-        hideAndShowArrow(leftArrow,"hide-arrow","show-arrow")
+        hideAndShowArrow(leftArrow,"hide-arrow","show-arrow");
       }
       setMobileData(mobileItems[this.indexMobile]);
     }
+  }
+
+  this.selectClickableLeftItemHandlerMobile = function($data){
+    if (this.indexMobile >= 0){
+      hideAndShowArrow(rightArrow,"show-arrow","hide-arrow");
+      hideAndShowArrow(resetArrow,"hide-arrow","show-arrow");
+      this.indexMobile -= 1;
+      if(this.indexMobile == 0){
+        hideAndShowArrow(leftArrow,"hide-arrow","show-arrow");
+      }
+      setMobileData(mobileItems[this.indexMobile]);
+    }
+  }
+
+  this.returnFirstButtonClick = function($data){
+    this.indexMobile = 0;
+    hideAndShowArrow(resetArrow,"hide-arrow","show-arrow");
+    hideAndShowArrow(leftArrow,"hide-arrow","show-arrow");
+    hideAndShowArrow(rightArrow,"show-arrow","hide-arrow");
+    setMobileData(mobileItems[this.indexMobile]);
   }
   
   this.init();
