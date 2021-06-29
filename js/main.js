@@ -30,6 +30,12 @@ function clickableItemModel(index,data){
   this.text = data.text;
 }
 
+function referenceItemModel(index,data){
+  this.index = index;
+  this.img2 = data.img;
+  this.text2 = data.text;
+}
+
 function setMobileData(data){
   let elementTitle = document.getElementById("mobile-button-text");
   let elementText = document.getElementById("itemText");
@@ -85,7 +91,7 @@ function getHeightForButton(data){
 function returnButton(){
   let desktopMode = document.getElementById("desktop-mode");
   let mobileScreen = document.getElementById("mobile-screen");
-  let artworkMode = document.getElementById("artwork-references")
+  let artworkMode = document.getElementById("artwork-reference")
   desktopMode.classList.remove("hide-element");
   mobileScreen.classList.remove("hide-element");
   mobileScreen.classList.add("mobile-screen");
@@ -100,7 +106,7 @@ function ButtonNavigationTemplate() {
   this.text = ko.observable();
   this.clickableItemsLeft = ko.observableArray([]);
   this.clickableItemsRight = ko.observableArray([]);
-  this.artworkReferences = ko.observableArray([]);
+  this.artworkReferencesItems = ko.observableArray([]);
   this.selectedClickableItem = ko.observable();
   this.indexMobile = 0;
   this.biggerTitle = "";
@@ -114,7 +120,7 @@ function ButtonNavigationTemplate() {
   let resetArrow = document.getElementById("reset-arrow");
   let desktopMode = document.getElementById("desktop-mode");
   let mobileScreen = document.getElementById("mobile-screen");
-  let artworkMode = document.getElementById("artwork-references")
+  let artworkMode = document.getElementById("artwork-reference")
   let artworkInstruction = document.getElementById("artwork-instruction")
   let instructions = document.getElementById("instruction")
 
@@ -133,6 +139,7 @@ function ButtonNavigationTemplate() {
 
     let leftItems = [];
     let rightItems = [];
+    
     let lengthItem = data.items.item.length;
     for(var i = 0; i < lengthItem; i++){
       if(i <= (lengthItem/2)-1){
@@ -142,6 +149,13 @@ function ButtonNavigationTemplate() {
       }
     }
 
+    let referencesItems = [];
+    let referencesLenght = data.artworkreferences.items.item.length;
+
+    for(var i = 0; i < referencesLenght; i++){
+      referencesItems.push(new referenceItemModel(i,data.artworkreferences.items.item[i]));
+    }
+
     mobileItems = leftItems.concat(rightItems);
     this.biggerTitle = getBiggerTittleSize(mobileItems);
     getHeightForButton(mobileItems);
@@ -149,6 +163,7 @@ function ButtonNavigationTemplate() {
     this.clickableItemsRight(rightItems);
     setMobileData(data.items.item[0].clickable);
     addClickedBoxClass(data.items.item[0].clickable);
+    this.artworkReferencesItems(referencesItems);
   }
 
   this.selectClickableItemHandler = function($data){
