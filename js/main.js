@@ -1,6 +1,6 @@
 function loadImages(data){
-  document.getElementById("loadImage").src = `images/${data.src}`;
-  document.getElementById("loadImage").alt = `images/${data.alt}`;
+  document.getElementById("loadImage").src = data.src;
+  document.getElementById("loadImage").alt = data.alt;
 }
 
 function addClickedBoxClass(data){
@@ -32,8 +32,8 @@ function clickableItemModel(index,data){
 
 function referenceItemModel(index,data){
   this.index = index;
-  this.img2 = data.img;
-  this.text2 = data.text;
+  this.img = data.img;
+  this.text = data.text;
 }
 
 function setMobileData(data){
@@ -150,10 +150,9 @@ function ButtonNavigationTemplate() {
     }
 
     let referencesItems = [];
-    let referencesLenght = data.artworkreferences.items.item.length;
 
-    for(var i = 0; i < referencesLenght; i++){
-      referencesItems.push(new referenceItemModel(i,data.artworkreferences.items.item[i]));
+    for(var i = 0; i < lengthItem; i++){
+      referencesItems.push(new referenceItemModel(i,data.items.item[i].clickable));
     }
 
     mobileItems = leftItems.concat(rightItems);
@@ -164,6 +163,7 @@ function ButtonNavigationTemplate() {
     setMobileData(data.items.item[0].clickable);
     addClickedBoxClass(data.items.item[0].clickable);
     this.artworkReferencesItems(referencesItems);
+    console.log(referencesItems)
   }
 
   this.selectClickableItemHandler = function($data){

@@ -12,7 +12,7 @@
     <item>
       <clickable>
         <img>
-          <src>integumentary.png</src>
+          <src>images/integumentary.png</src>
           <alt>Integumentary image</alt>
         </img>
         <title> Integumentary</title>
@@ -26,7 +26,7 @@
     <item>
       <clickable>
         <img>
-          <src>muscular.png</src>
+          <src>images/muscular.png</src>
           <alt>Muscular image</alt>
         </img>
         <title>Muscular</title>
@@ -37,7 +37,7 @@
     <item>
       <clickable>
         <img>
-          <src>skeletal.png</src>
+          <src>images/skeletal.png</src>
           <alt>Skeletal image</alt>
         </img>
         <title>Skeletal</title>
@@ -51,7 +51,7 @@
     <item>
       <clickable>
         <img>
-          <src>digestive.png</src>
+          <src>images/digestive.png</src>
           <alt>Digestive image</alt>
         </img>
         <title>Digestive</title>
@@ -64,7 +64,7 @@
     <item>
       <clickable>
         <img>
-          <src>lymphatic.png</src>
+          <src>images/lymphatic.png</src>
           <alt>Lymphatic image</alt>
         </img>
         <title>Lymphatic</title>
@@ -77,7 +77,7 @@
     <item>
       <clickable>
         <img>
-          <src>endocrine.png</src>
+          <src>images/endocrine.png</src>
           <alt>Endocrine image</alt>
         </img>
         <title>The endocrine system is a messenger </title>
@@ -91,7 +91,7 @@
      <item>
       <clickable>
         <img>
-          <src>nervous.png</src>
+          <src>images/nervous.png</src>
           <alt>Nervous image</alt>
         </img>
         <title>Nervous</title>
@@ -104,7 +104,7 @@
      <item>
       <clickable>
         <img>
-          <src>circulatory.png</src>
+          <src>images/circulatory.png</src>
           <alt>Circulatory image</alt>
         </img>
         <title>Circulatory</title>
@@ -118,7 +118,7 @@
      <item>
       <clickable>
         <img>
-          <src>respiratory.png</src>
+          <src>images/respiratory.png</src>
           <alt>Respiratory image</alt>
         </img>
         <title>The respiratory system is the network</title>
@@ -132,7 +132,7 @@
     <item>
       <clickable>
         <img>
-          <src>urinary.png</src>
+          <src>images/urinary.png</src>
           <alt>Urinary image</alt>
         </img>
         <title>Urinary</title>
@@ -146,7 +146,7 @@
      <item>
       <clickable>
         <img>
-          <src>female_reproductive.png</src>
+          <src>images/female_reproductive.png</src>
           <alt>Female Reproductive image</alt>
         </img>
         <title>Female Reproductive Carcinogens  that have the potential </title>
@@ -160,7 +160,7 @@
     <item>
       <clickable>
         <img>
-          <src>male_reproductive.png</src>
+          <src>images/male_reproductive.png</src>
           <alt>Male Reproductive image</alt>
         </img>
         <title>Male Reproductive</title>
@@ -177,22 +177,6 @@
       <desktop>Attributions</desktop>
       <mobile>Attributions</mobile>
     </instruction>
-    <items>
-      <item>
-        <img>
-          <src>arwork_references.jpg</src>
-          <alt>arwork_references</alt>
-        </img>
-        <text> Main 12 human body organ systems. Photo CreditL Shutterstock by Macrovector </text>
-      </item>
-      <item>
-        <img>
-          <src>arwork_references.jpg</src>
-          <alt>arwork_references</alt>
-        </img>
-        <text> Main 12 human body organ systems. Photo CreditL Shutterstock by Macrovector </text>
-      </item>
-    </items>
   </artworkreferences>
 
 </dataset>
