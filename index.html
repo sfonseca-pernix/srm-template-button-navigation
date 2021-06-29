@@ -65,14 +65,13 @@
           <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()"></p>
         </div>
       </div>
-      <span class="artwork-references-mobile">Artwork References</span>
+      <a><span class="artwork-references-mobile">Artwork References</span></a>
     </header>
     <section>
-      <div class="row mobile-screen">
+      <div class="row mobile-screen" id="mobile-screen">
         <div class="col-12 d-flex justify-content-center">
           <div class="mobile-card d-flex align-items-center">
-            <div class="circle-left-arrow" 
-              data-bind="click:selectClickableLeftItemHandlerMobile">
+            <div class="circle-left-arrow" data-bind="click:selectClickableLeftItemHandlerMobile">
               <button class="prev_btn hide-arrow" title='previous' id="left-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80 80">
                   <g>
@@ -91,12 +90,11 @@
                 </svg>
               </button>
             </div>
-            <div class="circle-right-arrow ml-5" 
-              data-bind="click:selectClickableRightItemHandlerMobile">
+            <div class="circle-right-arrow ml-5" data-bind="click:selectClickableRightItemHandlerMobile">
               <button class="next_btn show-arrow" title='next' id="right-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80 80">
                   <g>
-                    <g fill="#001a36" stroke="none" transform="rotate(180 38.5 38.5)" >
+                    <g fill="#001a36" stroke="none" transform="rotate(180 38.5 38.5)">
                       <circle cx="38.5" cy="38.5" r="38.5" stroke="none" />
                       <circle cx="38.5" cy="38.5" r="38" fill="none" />
                     </g>
@@ -111,71 +109,115 @@
                 </svg>
               </button>
             </div>
-            <div class="circle-reset-arrow ml-5"
-              data-bind="click:returnFirstButtonClick">
+            <div class="circle-reset-arrow ml-5" data-bind="click:returnFirstButtonClick">
               <button class="reset_btn hide-arrow" title='restart' id="reset-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80 80">
-                    <g>
-                        <g fill="#e6faff" stroke="#051a34" transform="rotate(180 38.5 38.5)">
-                            <circle cx="38.5" cy="38.5" r="38.5" stroke="none" />
-                            <circle cx="38.5" cy="38.5" r="38" fill="none" />
-                        </g>
-                        <g>
-                            <g>
-                                <path fill="#fff" stroke="#051a34"
-                                    d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
-                                    transform="rotate(180 38.5 38.5) translate(17.906 13.826)" />
-                            </g>
-                        </g>
-                        <g>
-                            <g>
-                                <path fill="#fff" stroke="#051a34"
-                                    d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
-                                    transform="rotate(180 38.5 38.5) translate(38.906 13.826)" />
-                            </g>
-                        </g>
+                  <g>
+                    <g fill="#e6faff" stroke="#051a34" transform="rotate(180 38.5 38.5)">
+                      <circle cx="38.5" cy="38.5" r="38.5" stroke="none" />
+                      <circle cx="38.5" cy="38.5" r="38" fill="none" />
                     </g>
+                    <g>
+                      <g>
+                        <path fill="#fff" stroke="#051a34"
+                          d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
+                          transform="rotate(180 38.5 38.5) translate(17.906 13.826)" />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path fill="#fff" stroke="#051a34"
+                          d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
+                          transform="rotate(180 38.5 38.5) translate(38.906 13.826)" />
+                      </g>
+                    </g>
+                  </g>
                 </svg>
-            </button>
+              </button>
             </div>
             <p class="button-text d-flex align-items-center" id="mobile-button-text"></p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="offset-xl-1 col-xl-3 hide">
-          <div class="row box-buttons" data-bind="foreach:clickableItemsLeft">
-            <button class="data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
-              <p class="button-text d-flex align-items-center justify-content-center" data-bind="html:title"></p>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-12 col-xl-4 d-flex align-items-center justify-content-center">
-          <img id="loadImage">
-        </div>
-        <div class=" offset-xl-12 col-xl-3 hide">
-          <div class="row d-flex justify-content-end box-buttons" data-bind="foreach:clickableItemsRight">
-            <button class="data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
-              <p class="button-text d-flex align-items-center justify-content-center" data-bind="html:title"></p>
-            </button>
-          </div>
-        </div>
-        <div class="col-1"></div>
-      </div>
-      <div class="mt-5">
+      <div id="desktop-mode">
         <div class="row">
-          <div class="col-1"></div>
-          <div class="col-10">
-            <p class="data-button" id="itemText">
-            </p><br>
-            <div class="d-flex justify-content-end">
-              <a class="artwork-references ">Artwork References</a>
+          <div class="offset-xl-1 col-xl-3 hide">
+            <div class="row box-buttons" data-bind="foreach:clickableItemsLeft">
+              <button class="data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+                <p class="button-text d-flex align-items-center justify-content-center" data-bind="html:title"></p>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-12 col-xl-4 d-flex align-items-center justify-content-center">
+            <img id="loadImage">
+          </div>
+          <div class=" offset-xl-12 col-xl-3 hide">
+            <div class="row d-flex justify-content-end box-buttons" data-bind="foreach:clickableItemsRight">
+              <button class="data-cards" data-bind="click:$parent.selectClickableItemHandler, attr: { id: title }">
+                <p class="button-text d-flex align-items-center justify-content-center" data-bind="html:title"></p>
+              </button>
             </div>
           </div>
           <div class="col-1"></div>
         </div>
+        <div class="mt-5">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+              <p class="data-button" id="itemText">
+              </p><br>
+              <div class="d-flex justify-content-end">
+                <a class="artwork-references" data-bind="click:activeArtworkReferences">Artwork References</a>
+              </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+        </div>
       </div>
   </div>
+  <div class="artwork-references hide-element" id="artwork-references">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div class="card m-5">
+          <img src="images/artwork_references.jpg" class="card-img-top artwork-image" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row return-button">
+      <div class="col d-flex justify-content-end mr-1">
+        <button class="return_btn" title='Return' id="return-arrow" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80 80">
+            <g>
+              <g fill="#001a36" stroke="#051a34" transform="rotate(180 38.5 38.5)">
+                <circle cx="38.5" cy="38.5" r="38.5" stroke="none" />
+                <circle cx="38.5" cy="38.5" r="38" fill="none" />
+              </g>
+              <g>
+                <g>
+                  <path fill="#fff" stroke="#051a34"
+                    d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
+                    transform="rotate(180 38.5 38.5) translate(17.906 13.826)" />
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path fill="#fff" stroke="#051a34"
+                    d="M1.188 7.057a4.219 4.219 0 0 1 0-5.869 4.219 4.219 0 0 1 5.869 0l19.751 19.658a4.335 4.335 0 0 1 0 5.963L7.057 46.466a4.219 4.219 0 0 1-5.869 0 4.335 4.335 0 0 1 0-5.963l16.77-16.676-16.77-16.77z"
+                    transform="rotate(180 38.5 38.5) translate(38.906 13.826)" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
   </section>
   </div>
 </body>

@@ -100,6 +100,9 @@ function ButtonNavigationTemplate() {
   let rightArrow = document.getElementById("right-arrow");
   let leftArrow = document.getElementById("left-arrow");
   let resetArrow = document.getElementById("reset-arrow");
+  let desktopMode = document.getElementById("desktop-mode");
+  let mobileScreen = document.getElementById("mobile-screen");
+  let artworkMode = document.getElementById("artwork-references")
 
   this.init = function () {
     this.loadXML("./data/data.xml", this.xmlLoaded.bind(this));
@@ -182,6 +185,20 @@ function ButtonNavigationTemplate() {
     hideAndShowArrow(leftArrow,"hide-arrow","show-arrow");
     hideAndShowArrow(rightArrow,"show-arrow","hide-arrow");
     setMobileData(mobileItems[this.indexMobile]);
+  }
+
+  this.activeArtworkReferences = function($data){
+    console.log("SERGIO")
+    desktopMode.classList.add("hide-element");
+    mobileScreen.classList.add("hide-element");
+    artworkMode.classList.remove("hide-element");
+  }
+
+  this.returnButton = function($data){
+    console.log("SER")
+    desktopMode.classList.remove("hide-element");
+    mobileScreen.classList.remove("hide-element");
+    artworkMode.classList.add("hide-element");
   }
   
   this.init();
