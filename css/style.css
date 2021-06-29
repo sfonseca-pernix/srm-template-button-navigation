@@ -164,8 +164,13 @@ button{
 
 .return-button{
   position: fixed;
+  cursor: pointer;
   bottom: 0;
   right: 1%;
+}
+
+.circle-return-arrow{
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1271px) {

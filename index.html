@@ -59,7 +59,13 @@
       </div>
 
       <h1 class="activity-title" data-bind="html:title"></h1>
-      <div class="row" data-bind="with:instruction">
+      <div class="row" data-bind="with:instruction" id="instruction">
+        <div class="col">
+          <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()"></p>
+          <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()"></p>
+        </div>
+      </div>
+      <div class="row hide-element" data-bind="with:artworkInstruction" id="artwork-instruction">
         <div class="col">
           <p class="activity-instruction" data-bind="html:desktop,visible:!$parent.isMobileDeviceResoultion()"></p>
           <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()"></p>
@@ -175,9 +181,30 @@
         </div>
       </div>
   </div>
-  <div class="artwork-references hide-element" id="artwork-references">
+  <div class="hide-element" id="artwork-references">
     <div class="row">
-      <div class="col d-flex justify-content-center">
+      <div class="col d-flex justify-content-center" style="display: inline-block;">
+        <div class="card m-3">
+          <img src="images/artwork_references.jpg" class="card-img-top artwork-image" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+        <div class="card m-3">
+          <img src="images/artwork_references.jpg" class="card-img-top artwork-image" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+        <div class="card m-3">
+          <img src="images/artwork_references.jpg" class="card-img-top artwork-image" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
         <div class="card m-3">
           <img src="images/artwork_references.jpg" class="card-img-top artwork-image" alt="...">
           <div class="card-body">
@@ -190,7 +217,7 @@
 
     <div class="row return-button">
       <div class="col d-flex justify-content-end mr-1">
-        <button class="return_btn" title='Return' id="return-arrow" >
+        <button type="submit" class="return_btn" title='Return' id="return-arrow" onclick="returnButton();">
           <svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
             <g>
               <g fill="#001a36" stroke="#051a34" transform="rotate(180 38.5 38.5)">
@@ -215,8 +242,8 @@
           </svg>
         </button>
       </div>
+      </div>
     </div>
-  </div>
 
   </section>
   </div>

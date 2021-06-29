@@ -172,8 +172,7 @@
     </item>
   </items>
 
-  <artwork-references>
-    <title>Overview of the human organ systems</title>
+  <artworkreferences>
     <instruction>
       <desktop>Attributions</desktop>
       <mobile>Attributions</mobile>
@@ -187,6 +186,6 @@
         <text> Main 12 human body organ systems. Photo CreditL Shutterstock by Macrovector </text>
       </item>
     </items>
-  </artwork-references>
+  </artworkreferences>
 
 </dataset>
