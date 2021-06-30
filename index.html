@@ -70,7 +70,7 @@
             <p class="activity-instruction" data-bind="html:mobile,visible:$parent.isMobileDeviceResoultion()"></p>
           </div>
         </div>
-        <a><span class="artwork-references-mobile">Artwork References</span></a>
+        <a data-bind="click:activeArtworkReferences" id="references-mobile"><span class="artwork-references-mobile">Artwork References</span></a>
       </header>
       <section>
         <div class="row mobile-screen" id="mobile-screen">
@@ -195,7 +195,7 @@
 
           <div class="row return-button">
             <div class="col d-flex justify-content-end mr-1">
-              <button  class="return_btn" title='Return' id="return-arrow" onclick="returnButton();">
+              <button  class="return_btn" title='Return' id="return-arrow" data-bind="click:returnButton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
                   <g>
                     <g fill="#001a36" stroke="#051a34" transform="rotate(180 38.5 38.5)">

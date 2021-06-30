@@ -88,15 +88,7 @@ function getHeightForButton(data){
   tempButton.remove();
 }
 
-function returnButton(){
-  let desktopMode = document.getElementById("desktop-mode");
-  let mobileScreen = document.getElementById("mobile-screen");
-  let artworkMode = document.getElementById("artwork-reference")
-  desktopMode.classList.remove("hide-element");
-  mobileScreen.classList.remove("hide-element");
-  mobileScreen.classList.add("mobile-screen");
-  artworkMode.classList.add("hide-element");
-}
+
 
 function ButtonNavigationTemplate() {
 
@@ -120,9 +112,10 @@ function ButtonNavigationTemplate() {
   let resetArrow = document.getElementById("reset-arrow");
   let desktopMode = document.getElementById("desktop-mode");
   let mobileScreen = document.getElementById("mobile-screen");
-  let artworkMode = document.getElementById("artwork-reference")
-  let artworkInstruction = document.getElementById("artwork-instruction")
-  let instructions = document.getElementById("instruction")
+  let artworkMode = document.getElementById("artwork-reference");
+  let artworkInstruction = document.getElementById("artwork-instruction");
+  let instructions = document.getElementById("instruction");
+  let referencesMobile = document.getElementById("references-mobile");
 
   this.init = function () {
     this.loadXML("./data/data.xml", this.xmlLoaded.bind(this));
@@ -224,6 +217,17 @@ function ButtonNavigationTemplate() {
     artworkInstruction.classList.remove("hide-element");
     mobileScreen.classList.remove("mobile-screen");
     artworkMode.classList.remove("hide-element");
+    referencesMobile.classList.add("hide-element");
+  }
+
+  this.returnButton = function($data){
+    desktopMode.classList.remove("hide-element");
+    mobileScreen.classList.remove("hide-element");
+    mobileScreen.classList.add("mobile-screen");
+    artworkMode.classList.add("hide-element");
+    instructions.classList.remove("hide-element");
+    artworkInstruction.classList.add("hide-element");
+    referencesMobile.classList.remove("hide-element");
   }
 
   this.init();
