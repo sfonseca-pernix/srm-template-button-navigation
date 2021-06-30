@@ -156,7 +156,6 @@ function ButtonNavigationTemplate() {
     setMobileData(data.items.item[0].clickable);
     addClickedBoxClass(data.items.item[0].clickable);
     this.artworkReferencesItems(referencesItems);
-    console.log(referencesItems)
   }
 
   this.selectClickableItemHandler = function($data){

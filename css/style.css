@@ -154,7 +154,7 @@ button{
 }
 
 .artwork-image{
-  width: 100vh;
+  width: 100vw;
   height: 300px;
 }
 
@@ -173,13 +173,19 @@ button{
   display: grid;
   gap: 5rem;
   grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(25rem,2fr));
 }
 
 .card-text{
   font-family: Montserrat;
 	font-style: normal;
 	font-size: 22px;
+}
+
+.data-references{
+  position: relative;
+  width: 100px;
+  height: 200px;
 }
 
 @media only screen and (min-width: 1271px) {
